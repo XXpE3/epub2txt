@@ -2,7 +2,7 @@ import ebooklib
 from ebooklib import epub
 from bs4 import BeautifulSoup
 import bs4
-from typing import List
+from typing import List, Optional
 
 
 def is_blank(text: str) -> bool:
@@ -29,7 +29,7 @@ class Paragraph:
 
 
 class Chapter:
-    def __init__(self, paragraph_list: List[Paragraph] = None):
+    def __init__(self, paragraph_list: Optional[List[Paragraph]] = None):
         self.paragraph_list = paragraph_list or []
 
     def __len__(self):
